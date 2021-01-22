@@ -1,19 +1,30 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
-import HomePage from "../pages/homepage/HomePage";
-import MovieDetailsPage from "../pages/moviedetails/MovieDetailsPage";
-import MoviesPage from "../pages/moviespage/MoviesPage";
+import mainRoutes from "../../routes/MainRoutes";
+import DefaultPage from "../pages/DefaultPage";
 
 const Main = () => {
   return (
-    <>
-      {/*    
-        <Route path="/" component={HomePage} />
-        <Route path="/movies" component={MoviesPage} /> */}
-      <HomePage />
+    <Suspense fallback={<div>Loading...</div>}>
+      <Switch>
+        {mainRoutes.map(({ path, name, exact, component: MyComponent }) => (
+          // <Route path={path} exact={exact} key={path} component={component} />
+          <Route
+            path={path}
+            exact={exact}
+            key={path}
+            render={() => <MyComponent name={name} />}
+          />
+        ))}
+        <Route component={DefaultPage} />
+
+        {/* <Route path={path} exact={true} component={HomePage} />
+      <Route path={path} component={MoviesPage} /> */}
+        {/* <HomePage />
       <MoviesPage />
-      <MovieDetailsPage />
-    </>
+      <MovieDetailsPage /> */}
+      </Switch>
+    </Suspense>
   );
 };
 

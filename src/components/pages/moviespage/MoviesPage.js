@@ -1,4 +1,5 @@
 import React from "react";
+import MovieDetailsPage from "../moviedetails/MovieDetailsPage";
 import MoviesPageStyled from "./MoviesPageStyled";
 
 const MoviesPage = () => {
@@ -17,6 +18,7 @@ const MoviesPage = () => {
           </button>
         </form>
       </div>
+      <MovieDetailsPage />
     </MoviesPageStyled>
   );
 };

@@ -28,9 +28,11 @@ const Wrapper = styled.div`
   }
   .movies__form-btn {
     background-color: #ffdab9;
+    color: #696969;
     font-size: 20px;
     border: none;
     border-radius: 4px;
+    height: 56px;
     cursor: pointer;
     outline: none;
     margin-left: 20px;
@@ -39,6 +41,7 @@ const Wrapper = styled.div`
   .movies__form-btn:hover {
     border: 2px solid#ffdab9;
     background-color: white;
+    color: #ffdab9;
   }
 
   .movies__form-btn-label {

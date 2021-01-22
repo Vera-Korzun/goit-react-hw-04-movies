@@ -15,13 +15,20 @@ const Wrapper = styled.div`
     list-style: none;
   }
   .header__list-item {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.63;
-    color: #212121;
   }
   .header__list-item:not(:last-child) {
     margin-right: 15px;
+  }
+  .header__list-item-link {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.63;
+    color: #696969;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .active-link {
+    color: red;
   }
 `;
 
