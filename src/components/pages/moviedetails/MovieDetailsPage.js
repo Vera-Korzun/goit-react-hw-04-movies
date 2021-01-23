@@ -1,6 +1,6 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import moviesDetailsRoutes from "../../../routes/MoviesDetailsRouters";
+import Details from "./details/Details";
+import Navigation from "./details/navigation/Navigation";
 import MovieDetailsStyled from "./MovieDetailsStyled";
 
 const MovieDetailsPage = () => {
@@ -14,16 +14,9 @@ const MovieDetailsPage = () => {
       </button>
       <div className="details">
         <h4>Additional information</h4>
-        <ul>
-          {moviesDetailsRoutes.map(({ name, path, exact }) => (
-            <li key={path}>
-              <NavLink to={path} exact={exact}>
-                {name}
-              </NavLink>
-            </li>
-          ))}
-        </ul>
       </div>
+      <Navigation />
+      <Details />
     </MovieDetailsStyled>
   );
 };
