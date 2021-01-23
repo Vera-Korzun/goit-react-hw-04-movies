@@ -37,7 +37,7 @@ const MoviesPage = ({ onClick, dataMoviesSearch }) => {
             <span className="movies__form-btn-label">Search</span>
           </button>
         </form>
-        {/* {state.serching && <MoviesList dataMovies={dataMoviesSearch} />} */}
+        {state.serching && <MoviesList dataMoviesSearch={dataMoviesSearch} />}
       </div>
       <MovieDetailsPage />
     </MoviesPageStyled>
