@@ -1,0 +1,45 @@
+1. login netlify.com
+
+2. create netlify.toml
+[
+    [build]
+publish="build"
+
+[[redirects]]
+from="/*"
+to="/index.html"
+status=200
+]
+
+3. npm install netlify-cli -d
+4. netlify login
+
+submit auth
+
+5. package.json 
+
+change:
+[
+     "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "netlify deploy -p"
+]
+
+delete: "homepage"
+
+6. npm run deploy
+
+7.  choose
+> Create & configure a new site
+
+8. teem ENTER
+
+9. uniq site name : want do you want (vera-korzun-movies)
+
+10.live URL - 
+
+11. now after changes only npm run deploy
