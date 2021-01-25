@@ -3,7 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import LoaderSpinner from "../loader/LoaderSpinner";
 import { mainRoutes } from "../../routes/MainRoutes";
 import MovieDetailsPage from "../pages/moviedetails/MovieDetailsPage";
-//import DefaultPage from "../pages/DefaultPage";
+import DefaultPage from "../pages/DefaultPage";
 
 const Main = () => {
   // const { match } = useRouteMatch();
@@ -12,23 +12,21 @@ const Main = () => {
   return (
     <Suspense fallback={<LoaderSpinner />}>
       <Switch>
-        <>
-          {mainRoutes.map(({ path, name, exact, component: MyComponent }) => (
-            <Route
-              path={path}
-              exact={exact}
-              key={path}
-              render={() => <MyComponent name={name} />}
-            />
-          ))}
-          <Route path="/movies/:id" component={MovieDetailsPage}></Route>
-          {/* <Route
+        {mainRoutes.map(({ path, name, exact, component: MyComponent }) => (
+          <Route
+            path={path}
+            exact={exact}
+            key={path}
+            render={() => <MyComponent name={name} />}
+          />
+        ))}
+        <Route path="/movies/:id" component={MovieDetailsPage}></Route>
+        {/* <Route
             path={`${match.url}${secondMainRoute.path}`}
             exact={secondMainRoute.exact}
             component={secondMainRoute.component}
           /> */}
-          {/* <Route component={DefaultPage} /> */}
-        </>
+        <Route component={DefaultPage} />
       </Switch>
     </Suspense>
   );
