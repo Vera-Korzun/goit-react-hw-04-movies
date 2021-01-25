@@ -76,10 +76,12 @@ const MovieDetailsPage = () => {
             <h2 className="details__info-title">
               {title} ({release_date && release_date.slice(0, 4)})
             </h2>
-            <span>User score: {vote_average * 10}%</span>
-            <h3>Overview</h3>
-            <span>{overview}</span>
-            <h3>Genres</h3>
+            <span className="details__info-list">
+              User score: {vote_average * 10}%
+            </span>
+            <h3 className="details__info-title">Overview</h3>
+            <span className="details__info-list">{overview}</span>
+            <h3 className="details__info-title">Genres</h3>
             <ul className="details__info-genre">
               {genres &&
                 genres.map((item) => (
@@ -91,7 +93,7 @@ const MovieDetailsPage = () => {
           </div>
         </div>
         <div className="inform">
-          <h4>Additional information</h4>
+          <h4 className="details__info-title">Additional information</h4>
           <ul className="inform__list">
             {moviesDetailsRoutes.map(({ name, path, exact }) => (
               <li className="inform__list-item" key={`${id}${name}`}>

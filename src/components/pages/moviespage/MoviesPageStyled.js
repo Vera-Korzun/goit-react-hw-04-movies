@@ -6,6 +6,12 @@ const Wrapper = styled.div`
     border-bottom: 2px solid #ffdab9;
     box-shadow: 7px 7px 12px 3px rgba(0, 0, 0, 0.51);
   }
+  .movies__title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.63;
+    color: #696969;
+  }
   .movies__form {
     display: flex;
     align-items: center;
@@ -46,6 +52,25 @@ const Wrapper = styled.div`
 
   .movies__form-btn-label {
     font-size: 18px;
+  }
+  .movies__search-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    margin-top: 40px;
+  }
+  .movies__search-list-item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  .movies__search-list-link {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.63;
+    color: #696969;
+    text-decoration: none;
+  }
+  .movies__search-list-link:hover {
+    color: #ff7f50;
   }
 `;
 

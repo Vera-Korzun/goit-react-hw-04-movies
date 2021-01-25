@@ -17,11 +17,12 @@ const HomePage = () => {
     //console.log("trendMovies ==>>", trendMovies);
     <HomeStyled>
       <div className="homepage">
-        <h2>Trending today</h2>
-        <ul>
+        <h2 className="homepage_title">Trending today</h2>
+        <ul className="trending__list">
           {trendMovies.map((movie, index) => (
-            <li key={`${movie.id}${index}`}>
+            <li className="trending__list-item" key={`${movie.id}${index}`}>
               <NavLink
+                className="trending__list-link"
                 to={{
                   pathname: `/movies/${movie.id}`,
                   state: {

@@ -61,7 +61,7 @@ const MoviesPage = () => {
   return (
     <MoviesPageStyled>
       <div className="movies">
-        <h2>Movies</h2>
+        <h2 className="movies__title">Movies</h2>
         <form className="movies__form" onSubmit={onFormSubmit}>
           <input
             className="movies__form-input"
@@ -74,11 +74,15 @@ const MoviesPage = () => {
             <span className="movies__form-btn-label">Search</span>
           </button>
         </form>
-        <ul>
+        <ul className="movies__search-list">
           {searchMovies &&
             searchMovies.map((movie, index) => (
-              <li key={`${movie.id}${index}`}>
+              <li
+                className="movies__search-list-item"
+                key={`${movie.id}${index}`}
+              >
                 <NavLink
+                  className="movies__search-list-link"
                   to={{
                     pathname: `${match.url}/${movie.id}`,
 

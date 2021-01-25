@@ -31,12 +31,33 @@ const Wrapper = styled.div`
   .details__info-description {
     margin-left: 20px;
   }
+
+  .details__info-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.63;
+    color: #696969;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+  .details__info-list {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.63;
+    color: #696969;
+  }
   .details__info-genre {
     display: flex;
     flex-direction: row;
     padding: 0;
     margin: 0;
     list-style: none;
+  }
+  .details__info-genre-item {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.63;
+    color: #696969;
   }
   .details__info-genre-item:not(:last-child) {
     margin-right: 15px;
@@ -48,6 +69,12 @@ const Wrapper = styled.div`
     padding: 0;
     margin: 0;
     list-style: none;
+  }
+  .inform__list-item {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.63;
+    color: #696969;
   }
   .inform__list-item:not(:last-child) {
     margin-right: 15px;
