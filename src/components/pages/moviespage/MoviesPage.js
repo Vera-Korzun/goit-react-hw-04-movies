@@ -36,7 +36,6 @@ const MoviesPage = () => {
   const onFormSubmit = (e) => {
     e.preventDefault();
     getMovies(state.query);
-    //console.log("MoviesPage history", history);
     history.push({
       ...location,
       search: `?query=${state.query}`,
@@ -44,7 +43,6 @@ const MoviesPage = () => {
   };
 
   useEffect(() => {
-    console.log("usseEffect location", location);
     if (!location.state) {
       return;
     } else {
@@ -88,7 +86,6 @@ const MoviesPage = () => {
 
                     state: {
                       from: location.pathname,
-                      // + "?query=" + query,
                       query: query,
                       movieId: movie.id,
                     },

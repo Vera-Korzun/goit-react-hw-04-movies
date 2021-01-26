@@ -17,7 +17,6 @@ const MovieDetailsPage = () => {
   const match = useRouteMatch();
   const history = useHistory();
   const location = useLocation();
-  //console.log("MovieDetailsPage history", history);
 
   const getMovieDetails = async (id) => {
     const result = await fetchMovieDetails(id);
@@ -25,22 +24,16 @@ const MovieDetailsPage = () => {
     setState({ ...result });
   };
   useEffect(() => {
-    // console.log(
-    //   " MovieDetailsPage history.location.state.movieId",
-    //   history.location.state.movieId
-    // );
     getMovieDetails(history.location.state.movieId);
     // eslint-disable-next-line
   }, []);
 
   const goBack = () => {
-    // console.log(" goBack location.state", location.state);
-    //location.state.from
     history.push(
       //location.state.from
       {
         pathname: location.state.from,
-        search: "",
+        search: `?query=${location.state.query}`,
         state: {
           from: location.pathname,
           query: location.state.query,

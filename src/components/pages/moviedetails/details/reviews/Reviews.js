@@ -6,22 +6,19 @@ import ReviewsStyled from "./ReviewsStyled";
 const Reviews = () => {
   const [state, setState] = useState({});
   const location = useLocation();
-  //console.log(" history history", history);
 
   const getReviews = async (id) => {
     const results = await fetchMovieReviews(id);
-    console.log("result fetched ", results);
     setState({ ...results });
   };
 
   useEffect(() => {
-    console.log(" Reviews location", location);
     getReviews(location.state.movieId);
     // eslint-disable-next-line
   }, []);
 
   const { results } = state;
-  console.log("state results", state.results);
+  //console.log("state results", state.results);
 
   return (
     <ReviewsStyled>
