@@ -40,7 +40,11 @@ const MovieDetailsPage = () => {
       //location.state.from
       {
         pathname: location.state.from,
-        state: { ...location.state },
+        search: "",
+        state: {
+          from: location.pathname,
+          query: location.state.query,
+        },
       }
     );
   };
@@ -100,7 +104,7 @@ const MovieDetailsPage = () => {
                 <NavLink
                   to={{
                     pathname: `${match.url}${path}`,
-                    state: location.state,
+                    state: { ...location.state },
                   }}
                   exact={exact}
                   className="inform__list-item-link"

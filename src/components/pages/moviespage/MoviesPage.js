@@ -88,6 +88,7 @@ const MoviesPage = () => {
 
                     state: {
                       from: location.pathname,
+                      // + "?query=" + query,
                       query: query,
                       movieId: movie.id,
                     },
