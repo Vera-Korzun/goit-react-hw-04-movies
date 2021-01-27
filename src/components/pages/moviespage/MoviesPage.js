@@ -37,7 +37,7 @@ const MoviesPage = () => {
     e.preventDefault();
     getMovies(state.query);
     history.push({
-      ...location,
+      pathname: location.pathname,
       search: `?query=${state.query}`,
     });
   };
