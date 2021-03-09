@@ -27,6 +27,7 @@ change:
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "netlify deploy -p"
+     },
 ]
 
 delete: "homepage"
@@ -36,7 +37,7 @@ delete: "homepage"
 7.  choose
 > Create & configure a new site
 
-8. teem ENTER
+8. team ENTER
 
 9. uniq site name : want do you want (vera-korzun-movies)
 

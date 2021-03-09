@@ -13,6 +13,7 @@ const HomePage = () => {
       setTrendMovies([...response]);
     });
   }, []);
+
   return (
     //console.log("trendMovies ==>>", trendMovies);
     <HomeStyled>
@@ -31,7 +32,14 @@ const HomePage = () => {
                   },
                 }}
               >
-                {movie.title}
+                <img
+                  src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                  alt={movie.name ? movie.name : movie.title}
+                  width="250px"
+                />
+                <h3 className="trending__list-title">
+                  {movie.name ? movie.name : movie.title}
+                </h3>
               </NavLink>
             </li>
           ))}

@@ -59,7 +59,7 @@ const MoviesPage = () => {
   return (
     <MoviesPageStyled>
       <div className="movies">
-        <h2 className="movies__title">Movies</h2>
+        {/* <h2 className="movies__title">Movies</h2> */}
         <form className="movies__form" onSubmit={onFormSubmit}>
           <input
             className="movies__form-input"
